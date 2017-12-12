@@ -184,6 +184,9 @@ get_prop(system_app, usb_uvc_enabled_prop)
 allow system_app connectivityblob_data_file:dir rw_dir_perms;
 allow system_app connectivityblob_data_file:file create_file_perms;
 
+#selinux status
+allow system_app selinuxfs:file r_file_perms;
+
 ###
 ### Neverallow rules
 ###
