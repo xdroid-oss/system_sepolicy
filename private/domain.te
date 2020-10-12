@@ -2029,6 +2029,7 @@ define(`dac_override_allowed', `{
   zygote
   zygote_next
   userdebug_or_eng(`overlay_remounter')
+  update_engine
 }')
 neverallow ~dac_override_allowed self:global_capability_class_set dac_override;
 # Since the kernel checks dac_read_search before dac_override, domains that
@@ -2076,6 +2077,7 @@ neverallow {
   -gsid
   -init
   -recovery
+  -update_engine
   -ueventd
   -uncrypt
   -tee
